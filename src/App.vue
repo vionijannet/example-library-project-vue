@@ -1,19 +1,28 @@
 <template>
   <span class="card-expand">
     <p class="cutoff-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores consequatur sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores consequatur sed.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem
+      consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores
+      consequatur sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit
+      unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque
+      dolores consequatur sed.
     </p>
     <input type="checkbox" name="" id="" class="expand-btn">
   </span>
   <span class="card-expand">
     <p class="cutoff-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores consequatur sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores consequatur sed.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit unde rem
+      consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque dolores
+      consequatur sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt enim vitae impedit
+      unde rem consectetur ipsa nihil laudantium, possimus quidem, sint provident dolorem distinctio reprehenderit atque
+      dolores consequatur sed.
     </p>
     <input type="checkbox" name="" id="" class="expand-btn">
   </span>
   <div>
     <ButtonGista @click="alertSomething">hehehe</ButtonGista>
     <InputGista v-model="input" :labelText="'hehehe'"></InputGista>
+    <SelectGista v-model="op" :options="list"></SelectGista>
   </div>
 </template>
 
@@ -22,15 +31,39 @@ import { Option } from "vite-project-library/dist/types";
 import { ref } from "vue";
 
 const input = ref("");
+const op: Ref<Option> = ref({
+  text: "",
+  value: "",
+});
+const list: Option[] = [
+  {
+    text: "1",
+    value: "1",
+  },
+  {
+    text: "2",
+    value: "2",
+  },
+  {
+    text: "3",
+    value: "3",
+  },
+  {
+    text: "14",
+    value: "14",
+  },
+  {
+    text: "25",
+    value: "25",
+  },
+  {
+    text: "36",
+    value: "36",
+  }
+]
+
 function alertSomething(): void {
   window.alert("pe");
-
-  const x: Option = {
-    text: "someh",
-    value: "somep",
-  }
-
-  console.log(x);
 }
 </script>
 
