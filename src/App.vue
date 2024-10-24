@@ -18,11 +18,19 @@
 </template>
 
 <script setup lang="ts">
+import { Option } from "vite-project-library/dist/types";
 import { ref } from "vue";
 
 const input = ref("");
 function alertSomething(): void {
   window.alert("pe");
+
+  const x: Option = {
+    text: "someh",
+    value: "somep",
+  }
+
+  console.log(x);
 }
 </script>
 
